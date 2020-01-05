@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "fake-mariadb.fullname" . }}-test-connection"
+  labels:
+{{ include "fake-mariadb.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['{{ include "fake-mariadb.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

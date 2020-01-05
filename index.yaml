@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  fake-mariadb:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-01-20T00:48:11.633249738+01:00"
+    description: A Fake Helm chart for Objectif Libre Helm3 Training
+    digest: 0fbc913800bbdf5b2e3167ce1da372ac59ca17aef27811cead51bb0aeb25cdd7
+    name: fake-mariadb
+    type: application
+    urls:
+    - https://martincamey.github.io/helm-training-charts/fake-mariadb-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-01-20T00:48:11.631873154+01:00"
